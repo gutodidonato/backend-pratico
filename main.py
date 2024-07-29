@@ -11,6 +11,9 @@ restaurante = {
     5: {"nome": "Sabor Caseiro", "status": "ativo"},
 }
 
+@app.get("/")
+def read_root():
+    return {"message": "Bem-vindo ao API de Restaurantes"}
 
 @app.get("/restaurante/{id_restaurante}")
 def pegar_restaurante(id_restaurante: int):
